@@ -2151,3 +2151,5 @@ h2, h4 {
 .PadingMar9{padding-top: 25px;padding-left: 5px;}
 .PadingMar10{padding-top: 20px;padding-left: 10px;}
 .PadingMar11{padding-top: 10px;padding-left: 15px;}
+.bgcolor{background-color: white;padding: 100px;font-size: 25px;text-align: center;}
+.bgcolor>p{margin-bottom: 20px;}

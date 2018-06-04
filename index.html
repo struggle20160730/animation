@@ -2,11 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>轮播</title>
+		<title>特效</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<!--[if IE]>
+		<script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
 	</head>
 	<body>
+		<div class="bgcolor">
+			<p class="word1"></p>
+			<p class="word2"></p>
+		</div>
 		<div class="card">
 		  <div class="box rotate BoxBlue">
 		    <div class="WhiteBorder-center containerend animated"></div>
@@ -636,5 +643,24 @@
 		 	</div>
 		    <p>特效(64)</p>
 		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/l-by-l.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".word1").lbyl({
+			        content: "Welcome!欢迎光临，您可以在这里查找你喜欢的特效!",
+			        speed: 100,
+			        type: 'show',
+			        finished: function(){ 
+			        	$('.word2').lbyl({
+			        		content:"作者：Bright",
+			        		speed: 500,
+			        		type: 'fade',
+			        		fadeSpeed: 1000  //这个参数的意思是整段话出现需要的全部时间
+			        	})
+			        }
+			    });	
+			});
+		</script>
 	</body>
 </html>
