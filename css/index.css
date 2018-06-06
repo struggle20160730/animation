@@ -2,6 +2,7 @@
 body{
 	background-color: #000;
 }
+.MaxWid{width: 1200px;margin: 30px auto;}
 /*body>div{display: inline-block;}*/
 .WhiteBorder-center{width:22px; height:30px;background:url(../img/微信图片_20180514162330.png) no-repeat center;z-index:4;cursor: pointer;margin: 0 auto;padding-top: 65px;}
 /*css3上下晃动*/
