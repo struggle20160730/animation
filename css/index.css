@@ -3033,3 +3033,16 @@ h2, h4 {
 .LeftMar6{padding-top: 30px;padding-left: 8px;}
 .LeftMar7{padding-top: 20px;padding-left: 22px;}
 .LeftMar8{padding-left: 15px;padding-top: 5px;}
+.LeftMar9{padding-top: 40px;}
+.demoleft{width: 1px;height: 100px;margin: 10px auto; 
+background: -webkit-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
+background: -o-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
+background: -moz-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
+background: radial-gradient(#fff 10%,#313131 80%,#313131 10%);
+}
+.demoright{width: 100px;height: 1px;margin: 10px auto; 
+background: -webkit-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
+background: -o-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
+background: -moz-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
+background: radial-gradient(#fff 10%,#313131 80%,#313131 10%);}
+
