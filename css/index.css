@@ -3046,6 +3046,79 @@ background: -webkit-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
 background: -o-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
 background: -moz-radial-gradient(#fff 10%,#313131 80%,#313131 10%);
 background: radial-gradient(#fff 10%,#313131 80%,#313131 10%);}
+/*css白云飘动*/
+.main_window{
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+div{
+  margin: 0px;
+  padding: 0px;
+}
+
+.cloud{
+  width: 75px;
+  height: 12px;
+  background-color: #fff;   
+  border-radius: 10px;
+  position: absolute; 
+  top:50px;
+}
+
+[data-type=white_1]:before{
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  top: -12px;
+  left: 5px;
+  background-color: #fff;   
+  border-radius: 30px;
+  position: absolute;
+  /*云朵上半部分的形状*/
+  box-shadow: 18px 0 0 8px #fff, 38px 0 0 9px #fff, 49px 0 0 4px #FFF;
+}
+@-webkit-keyframes linemove
+{
+from {left:-50%;}
+to {left:150%;}
+}
+@-moz-keyframes linemove
+{
+from {left:-50%;}
+to {left:150%;}
+}
+@-ms-keyframes linemove
+{
+from {left:-50%;}
+to {left:150%;}
+}
+@-o-keyframes linemove
+{
+from {left:-50%;}
+to {left:150%;}
+}
+@keyframes linemove
+{
+from {left:-50%;}
+to {left:150%;}
+}
+[data-speed="3"]{
+  animation: linemove 3s;
+  -webkit-animation: linemove 3s;
+}
+.cloud{
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  -webkit-animation-delay: -2s;
+}
 /*css烟雾特效*/
 .Smoke{
 	width: 100%;
