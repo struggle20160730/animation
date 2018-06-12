@@ -3322,10 +3322,10 @@ to {left:150%;}
     background: radial-gradient(circle, red, yellow, green); 
 }
 .box10{/* 4、size 参数定义了渐变的大小。它可以是以下四个值：closest-side farthest-side closest-corner                 farthest-corner，具体的不同大家可以自己尝试，这里只展示一种情况 */
-    background: -webkit-radial-gradient(60% 55%, closest-side,blue,green,yellow,black); 
-    background: -o-radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
-    background: -moz-radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
-    background: radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
+    background: -webkit-radial-gradient(60% 55%, closest-side,blue,green,yellow,#03A9F4); 
+    background: -o-radial-gradient(60% 55%, closest-side,blue,green,yellow,#03A9F4);
+    background: -moz-radial-gradient(60% 55%, closest-side,blue,green,yellow,#03A9F4);
+    background: radial-gradient(60% 55%, closest-side,blue,green,yellow,#03A9F4);
 }
 .box11{/* 5、当然，也是有重复渐变这种情况*/
     background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%);
