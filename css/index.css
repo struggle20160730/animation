@@ -3265,6 +3265,234 @@ to {left:150%;}
   -webkit-animation-delay: 3.1s;
           animation-delay: 3.1s;
 }
+/*线性渐变*/
+.boxBack{height: 100px;}
+.box1{/* 1、属性值最少为两种颜色 */
+        background: -webkit-linear-gradient(red, yellow); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(red, yellow); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(red, yellow); /* Firefox 3.6 - 15 */
+        background: linear-gradient(red, yellow); /* 标准的语法 */
+}
+.box2{/* 2、可以设置颜色渐变的方向，比如从左到右 */
+        background: -webkit-linear-gradient(left, green , yellow); 
+        background: -o-linear-gradient(left, green, yellow); 
+        background: -moz-linear-gradient(left, green, yellow); 
+        background: linear-gradient(left, green , yellow);
+}
+.box3{/* 3、也可以沿着对角的方向渐变 */
+        background: -webkit-linear-gradient(top left, blue , yellow); 
+        background: -o-linear-gradient(top left, blue, yellow); 
+        background: -moz-linear-gradient(top left, blue, yellow); 
+        background: linear-gradient(top left, blue , yellow); 
+}
+.box4{/* 4、或者，我们直接用角度确定渐变的方向（12点钟方向为0deg） */
+       background: -webkit-linear-gradient(60deg, rgb(248, 182, 44), rgb(0, 159, 233)); 
+       background: -o-linear-gradient(60deg, rgb(248, 182, 44), rgb(0, 159, 233)); 
+       background: -moz-linear-gradient(60deg, rgb(248, 182, 44), rgb(0, 159, 233)); 
+       background: linear-gradient(60deg, rgb(248, 182, 44), rgb(0, 159, 233)); 
+}
+.box5{/* 5、我们也可以定义多种颜色的渐变，之前的方向的设置方法不变 */
+      background: -webkit-linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet);
+      background: -o-linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet);
+      background: -moz-linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet);
+      background: linear-gradient(45deg, red,orange,yellow,green,blue,indigo,violet); 
+}
+.box6{/* 6、当然，渐变可以是很多次的 */
+      background: -webkit-repeating-linear-gradient(red, red 10%, yellow 20%); 
+      background: -o-repeating-linear-gradient(red, red 10%, yellow 20%);
+      background: -moz-repeating-linear-gradient(red, red 10%, yellow 20%); 
+      background: repeating-linear-gradient(red, red 10%, yellow 20%); 
+}
+.box7{/* 1、颜色结点均匀分布（默认情况下 */
+    background: -webkit-radial-gradient(red, yellow, green); /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(red, yellow, green); /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(red, yellow, green); /* Firefox 3.6 - 15 */
+    background: radial-gradient(red, yellow, green); /* 标准的语法 */
+}
+.box8{/* 2、当然，对于颜色发辐射界限，我们也可以进行设置 */
+    background: -webkit-radial-gradient(red 5%, yellow 15%, green 60%); 
+    background: -o-radial-gradient(red 5%, yellow 15%, green 60%); 
+    background: -moz-radial-gradient(red 5%, yellow 15%, green 60%); 
+    background: radial-gradient(red 5%, yellow 15%, green 60%); 
+}
+.box9{/* 3、shape 参数定义了形状。它可以是值 circle 或 ellipse。其中，circle 表示圆形，ellipse 表示椭圆形。            默认值是 ellipse。*/
+    background: -webkit-radial-gradient(circle, red, yellow, green); 
+    background: -o-radial-gradient(circle, red, yellow, green); 
+    background: -moz-radial-gradient(circle, red, yellow, green); 
+    background: radial-gradient(circle, red, yellow, green); 
+}
+.box10{/* 4、size 参数定义了渐变的大小。它可以是以下四个值：closest-side farthest-side closest-corner                 farthest-corner，具体的不同大家可以自己尝试，这里只展示一种情况 */
+    background: -webkit-radial-gradient(60% 55%, closest-side,blue,green,yellow,black); 
+    background: -o-radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
+    background: -moz-radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
+    background: radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
+}
+.box11{/* 5、当然，也是有重复渐变这种情况*/
+    background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%);
+    background: -o-repeating-radial-gradient(red, yellow 10%, green 15%);
+    background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%);
+    background: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+/*文字流光效果*/
+.masked{
+	display: block;  
+    width: 100px;  
+    height: 100px;
+    line-height: 1.5; 
+    font-size: 30px; 
+    /*渐变背景*/  
+    background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,  
+    #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);  
+    color: transparent; /*文字填充色为透明*/  
+    -webkit-text-fill-color: transparent;  
+    -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景*/  
+    background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/  
+    /* 动画 */  
+    animation: masked-animation 4s infinite linear;  
+}
+@keyframes masked-animation {  
+    0% {  
+        background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/  
+    }  
+    100% {  
+        background-position: -100% 0;  
+    }  
+}  
+.loading2{
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 auto;
+    position: relative;
+    background: lightgreen;
+    -webkit-animation: changeBgColor 1.04s ease-in infinite alternate;
+}
+.loading2 span{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: lightgreen;
+    position: absolute;
+    margin-top: -7px;
+    margin-left:-8px;
+    -webkit-animation: changePosition 1.04s ease-in infinite alternate;
+}
+@-webkit-keyframes changeBgColor{
+    0%{
+        background: lightgreen;
+    }
+    100%{
+        background: lightblue;
+    }
+}
+@-webkit-keyframes changePosition{
+    0%{
+        background: lightgreen;
+    }
+    100%{
+        margin-left: 90px;
+        background: lightblue;
+    }
+}
+.loading12{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    border:5px solid lightgreen;
+    -webkit-animation: turn 2s linear infinite;
+}
+.loading12 span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: lightgreen;
+    position: absolute;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    -webkit-animation: changeBgColor 2s linear infinite;
+}
+@-webkit-keyframes changeBgColor{
+    0%{
+        background: lightgreen;
+    }
+    100%{
+        background: lightblue;
+    }
+}
+@-webkit-keyframes turn{
+    0%{
+        -webkit-transform: rotate(0deg);
+        border-color: lightgreen;
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        border-color: lightblue;
+    }
+}
+.LeftMar10{padding-top: 5px;}
+.loading13{
+    width: 100px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+.loading13 span{
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    background: lightgreen;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    overflow: hidden;
+    -webkit-animation: changePosition2 2.08s linear infinite;
+}
+@-webkit-keyframes changePosition2{
+    0%,100%{
+        -webkit-transform: translate(70px);
+    }
+    20%{
+        width: 50px;
+        height: 30px;
+        margin-top:-15px;
+        -webkit-transform: translate(0px);
+    }
+    30%{
+        width: 20px;
+        height: 60px;
+        margin-top:-30px;
+        -webkit-transform: translate(0px);
+    }
+    35%{
+        width: 50px;
+        height: 30px;
+        margin-top:-15px;
+        -webkit-transform: translate(5px);
+        background: lightblue;
+    }
+    70%{
+        width: 50px;
+        height: 30px;
+        margin-top:-15px;
+        -webkit-transform: translate(50px);
+    }
+    80%{
+        width: 20px;
+        height: 60px;
+        margin-top:-30px;
+        -webkit-transform: translate(70px);
+    }
+    85%{
+        width: 50px;
+        height: 30px;
+        margin-top:-15px;
+        -webkit-transform: translate(80px);
+        background: lightgreen;
+    }
 
-
-
+}
