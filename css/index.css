@@ -3926,5 +3926,16 @@ div.center:after {
 		clip:rect(117px,120px,120px,0px);
 	}			
 }
-
-
+.egg{border-radius: 50%;width: 100px;height: 80px;background: radial-gradient(ellipse farthest-corner at 25% 25%, #fff, #000);position: relative;top: 10px;}
+.egg2{border-radius: 50%;width: 80px;height: 85px;margin: 0 auto;background: radial-gradient(ellipse farthest-corner at 25% 25%, red, #fff);position: relative;top: 7px;}
+.boxImages{width: 100px;height: 100px;margin: auto;background: url(../img/women.png) no-repeat;cursor: pointer;background-size: 100% 100%;box-shadow: 0 0 5px #ccc inset;}
+.robot{width: 72px;height: 76px;background: url(../img/7p_2.png) no-repeat left bottom;margin: 0 auto;position: relative;top: 13px;}
+.robot>span{width: 72px;height: 25px;left: 0px;position: absolute;top: -25px;z-index: 10;background: url(../img/7p_3.png) no-repeat left bottom;animation: moveScan 1.4s infinite linear;}
+@keyframes moveScan {
+  0% {
+    top: -25px;
+  }
+  100% {
+    top: 53px;
+  }
+}
