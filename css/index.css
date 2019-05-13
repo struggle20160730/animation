@@ -5249,13 +5249,11 @@ div.center:after {
 		transform: rotate(45deg) translate(20%, 180%);
 	}
 }
-
 .backgroundImages {
 	width: 100%;
 	height: 100%;
 	animation: myfirst 5s infinite alternate;
 	border: 1px solid #03A9F4;
-	/*动画捆绑，两个值，动画名称、时长，加上一个无限执行，交替执行*/
 }
 @keyframes myfirst {
 	/*改变位置和背景颜色*/
