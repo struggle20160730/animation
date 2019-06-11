@@ -5249,12 +5249,14 @@ div.center:after {
 		transform: rotate(45deg) translate(20%, 180%);
 	}
 }
+
 .backgroundImages {
 	width: 100%;
 	height: 100%;
 	animation: myfirst 5s infinite alternate;
 	border: 1px solid #03A9F4;
 }
+
 @keyframes myfirst {
 	/*改变位置和背景颜色*/
 	0% {
@@ -5365,4 +5367,31 @@ div.center:after {
 		background: url(../img/027.png) no-repeat;
 		background-size: cover;
 	}
+}
+
+
+/*爱心点赞*/
+
+.heart {
+	width: 100px;
+	height: 100px;
+	background-position: 0 0;
+	cursor: pointer;
+	background: url(../img/heart.png) no-repeat;
+	-webkit-transition: background-position 1s steps(28);
+	transition: background-position 1s steps(28);
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+}
+
+.heart.is-active {
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	background-position: -2800px 0;
+}
+
+.stage {
+background-color: #03A9F4;
+	opacity: .5;
+    box-shadow: 0 0 5px #ccc;
 }
